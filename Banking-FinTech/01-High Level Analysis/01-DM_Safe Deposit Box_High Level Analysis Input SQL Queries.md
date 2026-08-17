@@ -5,12 +5,12 @@ Scroll Right and Left to see the whole query structure.
 
 <br>
 
-<table>
+<table width="100%">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Source Query (High Level Analysis)</th>
-      <th>Target Query (High Level Analysis)</th>
+      <th width="20%">Description</th>
+      <th width="20%">Source Query (High Level Analysis)</th>
+      <th width="20%">Target Query (High Level Analysis)</th>
     </tr>
   </thead>
   <tbody>
