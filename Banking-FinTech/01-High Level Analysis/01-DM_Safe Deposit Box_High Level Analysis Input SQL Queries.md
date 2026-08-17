@@ -5,7 +5,7 @@ Scroll Right and Left to see the whole query structure.
 
 <br>
 
-<table>
+<table width="100%">
   <thead>
     <tr>
       <th width="20%">Description</th>
