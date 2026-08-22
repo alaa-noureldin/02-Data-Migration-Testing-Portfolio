@@ -1,8 +1,4 @@
-
-Scroll Right and Left to see the full low-level validation structure.
-
-<details>
-<summary><b>▼ 4. Low-Level (Column-by-Column) Data Migration Validation</b></summary>
+<summary><b>Low-Level (Column-by-Column) Data Migration Validation</b></summary>
 
 <br>
 
@@ -54,5 +50,3 @@ Scroll Right and Left to see the full low-level validation structure.
     </tr>
   </tbody>
 </table>
-
-</details>
