@@ -1,6 +1,4 @@
-Scroll Right and Left to see the whole query structure.
 
-<details>
 <summary><b>01-Safe Deposit Box (SDB) High-Level Data Migration Queries</b></summary>
 
 <br>
@@ -38,4 +36,3 @@ Scroll Right and Left to see the whole query structure.
   </tbody>
 </table>
 
-</details>
