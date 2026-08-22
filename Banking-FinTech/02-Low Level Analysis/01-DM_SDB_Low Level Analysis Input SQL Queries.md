@@ -22,13 +22,6 @@
     </tr>
     <tr>
       <td valign='top'><b>AA_ARRANGEMENT_ACTIVITY</b></td>
-      <td valign='top'><b>CURRENCY</b></td>
-      <td valign='top'><code>--SDB : ARRANGEMENT ACTIVITY<br>SELECT  /*+ PARALLEL(T, 4)  PARALLEL(S, 4) */<br>T.ALTERNATE_ID, T.CURRENCY, S.CURRENCY FROM <br>--Target<br>(select ALTERNATE_ID, CURRENCY<br>from T24PROD.V_FBNK_AA_ARRANGEMENT_ACTIVITY@DBLINK191<br>Where  ALTERNATE_ID IS NOT NULL <br>AND ACTIVITY = 'SAFE.DEPOSIT.BOX-TAKEOVER-ARRANGEMENT'<br>) T<br>inner JOIN <br>--Source<br>(select RECID, 'EGP' AS CURRENCY<br>from T24PROD.V_F_EGPL_SAFE_BOXES<br> where FREE_RENTED='RENTED'<br>) S<br>ON  T.ALTERNATE_ID = S.RECID <br>where T.CURRENCY != S.CURRENCY <br>OR (T.CURRENCY IS NULL AND S.CURRENCY IS NOT NULL)  <br>OR (T.CURRENCY IS NOT NULL AND S.CURRENCY IS NULL);</code></td>
-      <td valign='top'>Pass</td>
-      <td valign='top'></td>
-    </tr>
-    <tr>
-      <td valign='top'><b>AA_ARRANGEMENT_ACTIVITY</b></td>
       <td valign='top'><b>ORIG_CONTRACT_DATE</b></td>
       <td valign='top'><code>--SDB : ARRANGEMENT ACTIVITY<br>SELECT  /*+ PARALLEL(T, 2)  PARALLEL(S, 2) */<br>T.ALTERNATE_ID, T.ORIG_CONTRACT_DATE, S.RENT_START_DATE FROM <br>--Target<br>(select ALTERNATE_ID, ORIG_CONTRACT_DATE<br>from T24PROD.V_FBNK_AA_ARRANGEMENT_ACTIVITY@DBLINK191<br>Where  ALTERNATE_ID IS NOT NULL <br>AND ACTIVITY = 'SAFE.DEPOSIT.BOX-TAKEOVER-ARRANGEMENT'<br>) T<br>inner JOIN <br>--Source<br>(select RECID, RENT_START_DATE <br>from T24PROD.V_F_EGPL_SAFE_BOXES<br> where FREE_RENTED = 'RENTED'<br>) S<br>ON  T.ALTERNATE_ID = S.RECID <br>where T.ORIG_CONTRACT_DATE != S.RENT_START_DATE <br>OR (T.ORIG_CONTRACT_DATE IS NULL AND S.RENT_START_DATE IS NOT NULL)  <br>OR (T.ORIG_CONTRACT_DATE IS NOT NULL AND S.RENT_START_DATE IS NULL);</code></td>
       <td valign='top'>Pass</td>
